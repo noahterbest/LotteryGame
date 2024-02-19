@@ -77,6 +77,10 @@
           </messages>
           <updatedAt value="2024-02-18T22:52:19.4125876" />
         </chat>
+        <chat>
+          <accountId value="VXNlcjozMDczNzA=" />
+          <internalId value="ef5b901b-83d9-4fe4-ba5f-2a6c262185b5" />
+        </chat>
       </list>
     </chats>
   </component>
