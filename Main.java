@@ -13,6 +13,22 @@ public class Main {
         // Create a scanner object
         Scanner input = new Scanner(System.in);
 
+        // Generate random numbers
+        randomNumber1 = (int) (Math.random() * 10 + 1);
+        randomNumber2 = (int) (Math.random() * 10 + 1);
+        randomNumber3 = (int) (Math.random() * 10 + 1);
+
+        // Get user input
+        System.out.print("Please guess the first number: ");
+        userGuess1 = input.nextInt();
+
+        System.out.print("Please guess the second number: ");
+        userGuess2 = input.nextInt();
+
+        System.out.print("Please guess the third number: ");
+        userGuess3 = input.nextInt();
+
+        // Check if the user guessed correctly
 
     }
 
