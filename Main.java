@@ -1,9 +1,10 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         //Variables
         int randomNumber1, randomNumber2, randomNumber3;
-        int userGuess1, userGuess2, userGuess3;
+        int userGuess;
 
         // Welcome to the Lottery Game!
         System.out.println("Hello! This program will generate 3 random numbers between 1 and 10");
@@ -20,16 +21,35 @@ public class Main {
 
         // Get user input
         System.out.print("Please guess the first number: ");
-        userGuess1 = input.nextInt();
+        userGuess = input.nextInt();
 
-        System.out.print("Please guess the second number: ");
-        userGuess2 = input.nextInt();
+        //Print random numbers
+        System.out.println("The first number is " + randomNumber1);
+        System.out.println("The second number is " + randomNumber2);
+        System.out.println("The third number is " + randomNumber3);
 
-        System.out.print("Please guess the third number: ");
-        userGuess3 = input.nextInt();
+        // Check if the random numbers are equal to each other
+        while (randomNumber1 == randomNumber2 || randomNumber1 == randomNumber3 || randomNumber2 == randomNumber3) {
+            randomNumber1 = (int) (Math.random() * 10 + 1);
+            randomNumber2 = (int) (Math.random() * 10 + 1);
+            randomNumber3 = (int) (Math.random() * 10 + 1);
+            System.out.println("One or more numbers equaled each other, re-rolling!");
+
+            // Print new random numbers
+            System.out.println("The first number is " + randomNumber1);
+            System.out.println("The second number is " + randomNumber2);
+            System.out.println("The third number is " + randomNumber3);
+        }
 
         // Check if the user guessed correctly
-
+        if(userGuess == randomNumber1) {
+            System.out.println("You guessed correctly!");
+        } else if(userGuess == randomNumber2) {
+            System.out.println("You guessed the second number correctly!");
+        } else if(userGuess == randomNumber3) {
+            System.out.println("You guessed the third number correctly!");
+        } else {
+            System.out.println("You guessed incorrectly!");
+        }
     }
-
 }
